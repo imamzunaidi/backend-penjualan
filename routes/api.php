@@ -7,6 +7,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\PiecesController; 
 use App\Http\Controllers\AdminController; 
+use App\Http\Controllers\ProductController; 
+use App\Http\Controllers\CartController; 
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -56,8 +58,29 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::get('delete-admin/{id}', [AdminController::class, 'delete']);
     Route::get('detail-admin/{id}', [AdminController::class, 'detail']);
     
+    Route::post('insert-product', [ProductController::class, 'insert']);
+    Route::post('update-product/{id}', [ProductController::class, 'update']);
+    Route::get('delete-product/{id}', [ProductController::class, 'delete']);
+    Route::get('detail-product/{id}', [ProductController::class, 'detail']);
+
+    
 });
 
-Route::middleware(['auth:api', 'role:pelanggan'])->get('/pelanggan', function (Request $request) {
-    return response()->json(['message' => 'Welcome Pelanggan']);
+
+Route::group(['middleware' => ['role:admin, pelanggan']], function () {
+
+    Route::get('product', [ProductController::class, 'index']);
+
+    Route::get('keranjang', [CartController::class, 'index']);
+    Route::post('insert-keranjang', [CartController::class, 'insert']);
+    Route::post('update-keranjang/{id}', [CartController::class, 'update']);
+    Route::get('delete-keranjang/{id}', [CartController::class, 'delete']);
+    Route::get('delete-by-produk/{id}', [CartController::class, 'delete_by_product']);
+    Route::get('detail-keranjang/{id}', [CartController::class, 'detail']);
+    
 });
+
+
+// Route::middleware(['auth:api', 'role:pelanggan'])->get('/pelanggan', function (Request $request) {
+//     return response()->json(['message' => 'Welcome Pelanggan']);
+// });

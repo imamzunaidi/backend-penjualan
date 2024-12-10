@@ -1,0 +1,1558 @@
+{
+	"info": {
+		"_postman_id": "fc54c273-510b-48be-828f-a7fa8f70ba77",
+		"name": "Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18186358"
+	},
+	"item": [
+		{
+			"name": "Kategori",
+			"item": [
+				{
+					"name": "InsertCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3OTg1MzksImV4cCI6MTczMzgwMjEzOSwibmJmIjoxNzMzNzk4NTM5LCJqdGkiOiI1ME9HTmlJb0NuT1pWOUxwIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.O6WwwLGKcKsSYjTgGYpjb4ScY62o_ca8kwdpfmvdcQ8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "Makanan",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/insert-category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"insert-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3OTg1MzksImV4cCI6MTczMzgwMjEzOSwibmJmIjoxNzMzNzk4NTM5LCJqdGkiOiI1ME9HTmlJb0NuT1pWOUxwIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.O6WwwLGKcKsSYjTgGYpjb4ScY62o_ca8kwdpfmvdcQ8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "update data category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/update-category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"update-category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "update data category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/detail-category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"detail-category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "update data category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/delete-category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"delete-category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "InsertProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3OTg1MzksImV4cCI6MTczMzgwMjEzOSwibmJmIjoxNzMzNzk4NTM5LCJqdGkiOiI1ME9HTmlJb0NuT1pWOUxwIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.O6WwwLGKcKsSYjTgGYpjb4ScY62o_ca8kwdpfmvdcQ8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name_product",
+									"value": "Gelas",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "brand_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "piace_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "data",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "3000",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/HWP-ADMIN/Pictures/gmail.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/insert-product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"insert-product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProduct",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3OTg1MzksImV4cCI6MTczMzgwMjEzOSwibmJmIjoxNzMzNzk4NTM5LCJqdGkiOiI1ME9HTmlJb0NuT1pWOUxwIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.O6WwwLGKcKsSYjTgGYpjb4ScY62o_ca8kwdpfmvdcQ8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3OTg1MzksImV4cCI6MTczMzgwMjEzOSwibmJmIjoxNzMzNzk4NTM5LCJqdGkiOiI1ME9HTmlJb0NuT1pWOUxwIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.O6WwwLGKcKsSYjTgGYpjb4ScY62o_ca8kwdpfmvdcQ8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name_product",
+									"value": "Mie Sedap Enak",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "20000",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "brand_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "piace_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "testing data oke",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/HWP-ADMIN/Pictures/Instagram_icon.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/update-product/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"update-product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DetailProduct",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3OTg1MzksImV4cCI6MTczMzgwMjEzOSwibmJmIjoxNzMzNzk4NTM5LCJqdGkiOiI1ME9HTmlJb0NuT1pWOUxwIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.O6WwwLGKcKsSYjTgGYpjb4ScY62o_ca8kwdpfmvdcQ8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "update data category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/detail-product/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"detail-product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProduct",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3OTg1MzksImV4cCI6MTczMzgwMjEzOSwibmJmIjoxNzMzNzk4NTM5LCJqdGkiOiI1ME9HTmlJb0NuT1pWOUxwIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.O6WwwLGKcKsSYjTgGYpjb4ScY62o_ca8kwdpfmvdcQ8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "update data category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/delete-product/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"delete-product",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Keranjang",
+			"item": [
+				{
+					"name": "InsertKeranjang",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "Makanan",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/insert-category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"insert-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getKeranjang",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateKeranjang",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "update data category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/update-keranjang/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"update-keranjang",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DetailKeranjang",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "update data category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/detail-category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"detail-category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteKeranjang",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "update data category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/delete-category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"delete-category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pemesanan",
+			"item": [
+				{
+					"name": "InsertPemesanan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "Makanan",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/insert-category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"insert-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPemesanan",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePemesanan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "update data category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/update-keranjang/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"update-keranjang",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DetailPemesanan",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "update data category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/detail-category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"detail-category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePemesanan",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "update data category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/delete-category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"delete-category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "InsertAdmin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MjcyNDIsImV4cCI6MTczMzczMDg0MiwibmJmIjoxNzMzNzI3MjQyLCJqdGkiOiJOMzdSdENadzlpM3BoWk90Iiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.5bjtQk7Nz-zVianCqHA07RZ0NteNZ88Xjgoz7YBzN9E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Saya",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "saya@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "saya",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/insert-admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"insert-admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAdmin",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MjcyNDIsImV4cCI6MTczMzczMDg0MiwibmJmIjoxNzMzNzI3MjQyLCJqdGkiOiJOMzdSdENadzlpM3BoWk90Iiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.5bjtQk7Nz-zVianCqHA07RZ0NteNZ88Xjgoz7YBzN9E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAdmin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MjcyNDIsImV4cCI6MTczMzczMDg0MiwibmJmIjoxNzMzNzI3MjQyLCJqdGkiOiJOMzdSdENadzlpM3BoWk90Iiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.5bjtQk7Nz-zVianCqHA07RZ0NteNZ88Xjgoz7YBzN9E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "saya update",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "saya@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "saya",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/update-admin/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"update-admin",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DetailAdmin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MjcyNDIsImV4cCI6MTczMzczMDg0MiwibmJmIjoxNzMzNzI3MjQyLCJqdGkiOiJOMzdSdENadzlpM3BoWk90Iiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.5bjtQk7Nz-zVianCqHA07RZ0NteNZ88Xjgoz7YBzN9E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "update data category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/detail-admin/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"detail-admin",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAdmin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MjcyNDIsImV4cCI6MTczMzczMDg0MiwibmJmIjoxNzMzNzI3MjQyLCJqdGkiOiJOMzdSdENadzlpM3BoWk90Iiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.5bjtQk7Nz-zVianCqHA07RZ0NteNZ88Xjgoz7YBzN9E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "update data category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/delete-admin/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"delete-admin",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Brand",
+			"item": [
+				{
+					"name": "InsertBrand",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name_brand",
+									"value": "Sarimi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/insert-brand",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"insert-brand"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBrand",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/brand",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"brand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Brand",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name_brand",
+									"value": "Indomilk",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/update-brand/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"update-brand",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Brand",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "update data category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/detail-category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"detail-category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Brand",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "update data category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/delete-brand/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"delete-brand",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pieces",
+			"item": [
+				{
+					"name": "InsertPieces",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "pieces",
+									"value": "box",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/insert-pieces",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"insert-pieces"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPieces",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/pieces",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"pieces"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePieces",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "pieces",
+									"value": "Liter",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/update-pieces/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"update-pieces",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DetailPieces",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "update data category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/detail-pieces/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"detail-pieces",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePieces",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "update data category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/backend-penjualan/public/api/delete-pieces/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"backend-penjualan",
+								"public",
+								"api",
+								"delete-pieces",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "pelanggan",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "pelanggan@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pelanggan",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "pelanggan",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/backend-penjualan/public/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"backend-penjualan",
+						"public",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/backend-penjualan/public/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"backend-penjualan",
+						"public",
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

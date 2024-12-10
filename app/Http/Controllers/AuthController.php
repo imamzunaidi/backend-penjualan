@@ -69,7 +69,11 @@ class AuthController extends Controller
 
         // $token = JWTAuth::fromUser($user);
 
-        return response()->json(['data' => 'berhasil melakukan register']);
+        return response()->json([
+            'status' => 'success',
+            'message' => 'cart retrieved successfully',
+            'data' => $user
+        ]);
     }
 
 }

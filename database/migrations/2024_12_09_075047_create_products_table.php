@@ -12,9 +12,9 @@ return new class extends Migration
             $table->id();
             $table->string('code_product');
             $table->string('name_product');
-            $table->foreignId('category_id')->constrained()->onDelete('cascade');
-            $table->foreignId('brand_id')->constrained()->onDelete('cascade');
-            $table->foreignId('peace_id')->constrained()->onDelete('cascade');
+            $table->integer('category_id');
+            $table->integer('brand_id');
+            $table->integer('piace_id');
             $table->text('description')->nullable();
             $table->text('image')->nullable();
             $table->decimal('price', 10, 2);

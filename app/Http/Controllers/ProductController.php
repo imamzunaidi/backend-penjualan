@@ -7,14 +7,14 @@ use App\Models\Product;
 use App\Models\Category;
 use App\Models\Brand;
 use App\Models\Peace;
-
+use File;
 
 class ProductController extends Controller
 {
 
       public function index()
       {
-          $products = Product::with(['category', 'brand', 'peace'])->get();
+          $products = Product::selectRaw('products.*, categories.category, brands.name_brand, pieces.pieces')->join('categories', 'categories.id', '=', 'products.category_id')->join('pieces', 'pieces.id', '=', 'products.piace_id')->join('brands', 'brands.id', '=', 'products.brand_id')->get();
           return response()->json([
               'status' => 'success',
               'message' => 'Products retrieved successfully',
@@ -24,7 +24,7 @@ class ProductController extends Controller
   
       public function detail($id)
       {
-          $product = Product::with(['category', 'brand', 'peace'])->find($id);
+          $product = Product::selectRaw('products.*, categories.category, brands.name_brand, pieces.pieces')->join('categories', 'categories.id', '=', 'products.category_id')->join('pieces', 'pieces.id', '=', 'products.piace_id')->join('brands', 'brands.id', '=', 'products.brand_id')->where('products.id',$id)->first();
   
           if (!$product) {
               return response()->json([
@@ -46,7 +46,7 @@ class ProductController extends Controller
               'name_product' => 'required|string|max:255',
               'category_id' => 'required|exists:categories,id',
               'brand_id' => 'required|exists:brands,id',
-              'peace_id' => 'required|exists:peaces,id',
+            //   'piace_id' => 'required|exists:peaces,id',
               'description' => 'nullable|string',
               'price' => 'required|numeric'
           ]);
@@ -66,9 +66,10 @@ class ProductController extends Controller
                 $data = [
                     'code_product' => $newCode,
                     'name_product' => $request->name_product,
+                    'price' => $request->price,
                     'category_id' => $request->category_id,
                     'brand_id' => $request->brand_id,
-                    'peace_id' => $request->peace_id,
+                    'piace_id' => $request->piace_id,
                     'description' => $request->description,
                     'image' => $nama_document,
                 ];
@@ -100,14 +101,14 @@ class ProductController extends Controller
               ], 404);
           }
   
-          $request->validate([
-              'name' => 'required|string|max:255',
-              'category_id' => 'required|exists:categories,id',
-              'brand_id' => 'required|exists:brands,id',
-              'peace_id' => 'required|exists:peaces,id',
-              'description' => 'nullable|string',
-              'price' => 'required|numeric'
-          ]);
+        //   $request->validate([
+        //       'name' => 'required|string|max:255',
+        //       'category_id' => 'required|exists:categories,id',
+        //       'brand_id' => 'required|exists:brands,id',
+        //     //   'peace_id' => 'required|exists:peaces,id',
+        //       'description' => 'nullable|string',
+        //       'price' => 'required|numeric'
+        //   ]);
   
           try {
                 $data = [

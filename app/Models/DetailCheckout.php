@@ -5,10 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Pieces extends Model
+class DetailCheckout extends Model
 {
     use HasFactory;
-
-    protected $fillable = ['pieces'];
-
+    
+    protected $fillable = ['qty', 'product_id', 'price_item', 'checkout_id'];
 }
