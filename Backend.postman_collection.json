@@ -454,7 +454,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM4MDM1NDUsImV4cCI6MTczMzgwNzE0NSwibmJmIjoxNzMzODAzNTQ1LCJqdGkiOiJRQnFrZUg5U012ZzFTeEJSIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U_PkgI7KV_6-ogLBmzpp5J6llq8cKyzn7WVn7Dr-ZvQ",
 								"type": "text"
 							}
 						],
@@ -462,14 +462,24 @@
 							"mode": "formdata",
 							"formdata": [
 								{
-									"key": "category",
-									"value": "Makanan",
+									"key": "qty",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "1",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost/backend-penjualan/public/api/insert-category",
+							"raw": "http://localhost/backend-penjualan/public/api/insert-keranjang",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -478,7 +488,7 @@
 								"backend-penjualan",
 								"public",
 								"api",
-								"insert-category"
+								"insert-keranjang"
 							]
 						}
 					},
@@ -486,17 +496,24 @@
 				},
 				{
 					"name": "getKeranjang",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM4MDM1NDUsImV4cCI6MTczMzgwNzE0NSwibmJmIjoxNzMzODAzNTQ1LCJqdGkiOiJRQnFrZUg5U012ZzFTeEJSIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U_PkgI7KV_6-ogLBmzpp5J6llq8cKyzn7WVn7Dr-ZvQ",
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
 						"url": {
-							"raw": "http://localhost/backend-penjualan/public/api/category",
+							"raw": "http://localhost/backend-penjualan/public/api/keranjang",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -505,7 +522,7 @@
 								"backend-penjualan",
 								"public",
 								"api",
-								"category"
+								"keranjang"
 							]
 						}
 					},
@@ -518,7 +535,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM4MDM1NDUsImV4cCI6MTczMzgwNzE0NSwibmJmIjoxNzMzODAzNTQ1LCJqdGkiOiJRQnFrZUg5U012ZzFTeEJSIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U_PkgI7KV_6-ogLBmzpp5J6llq8cKyzn7WVn7Dr-ZvQ",
 								"type": "text"
 							}
 						],
@@ -526,8 +543,8 @@
 							"mode": "formdata",
 							"formdata": [
 								{
-									"key": "category",
-									"value": "update data category",
+									"key": "qty",
+									"value": "5",
 									"type": "text"
 								}
 							]
@@ -559,7 +576,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM4MDM1NDUsImV4cCI6MTczMzgwNzE0NSwibmJmIjoxNzMzODAzNTQ1LCJqdGkiOiJRQnFrZUg5U012ZzFTeEJSIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U_PkgI7KV_6-ogLBmzpp5J6llq8cKyzn7WVn7Dr-ZvQ",
 								"type": "text"
 							}
 						],
@@ -574,7 +591,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost/backend-penjualan/public/api/detail-category/1",
+							"raw": "http://localhost/backend-penjualan/public/api/detail-keranjang/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -583,7 +600,7 @@
 								"backend-penjualan",
 								"public",
 								"api",
-								"detail-category",
+								"detail-keranjang",
 								"1"
 							]
 						}
@@ -600,7 +617,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM3MTYyMzEsImV4cCI6MTczMzcxOTgzMSwibmJmIjoxNzMzNzE2MjMxLCJqdGkiOiJ0Qm5semdlZ2ZsbU1vZWFDIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.qgNTbyqPSk4dOYeXYC31byMtNj_5mftkDqihskmTZOY",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2JhY2tlbmQtcGVuanVhbGFuL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE3MzM4MDM1NDUsImV4cCI6MTczMzgwNzE0NSwibmJmIjoxNzMzODAzNTQ1LCJqdGkiOiJRQnFrZUg5U012ZzFTeEJSIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U_PkgI7KV_6-ogLBmzpp5J6llq8cKyzn7WVn7Dr-ZvQ",
 								"type": "text"
 							}
 						],
@@ -615,7 +632,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost/backend-penjualan/public/api/delete-category/1",
+							"raw": "http://localhost/backend-penjualan/public/api/delete-keranjang/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -624,8 +641,8 @@
 								"backend-penjualan",
 								"public",
 								"api",
-								"delete-category",
-								"1"
+								"delete-keranjang",
+								"3"
 							]
 						}
 					},
